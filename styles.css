@@ -1,0 +1,286 @@
+header, article, footer{
+	clear: both;
+}
+header{
+	background-color: #483e54;
+	padding-left: 10px;
+}
+#article{
+	height: 600px;
+}
+footer{
+	background-color: #483e54;
+	color: white;
+	text-align: center;
+	padding: 15px;
+}
+.btn-group, .btn-group .dropdown-menu, .btn-group .dropdown-menu .dropdown-item{
+	background-color: #483e54;
+	color: white;
+}
+.btn-group .dropdown-menu .dropdown-item:hover{
+	background-color: #2a2430;
+	color: white;
+}
+article #single, article #multiple{
+	width: 50%;
+	height: 100%;
+	padding: 0px;
+	float: left;
+}
+article #single h1, article #multiple h1, article #s-multiple-page h1, article #m-single-page h1{
+	display: inline-block;
+	padding: 10px;
+	color: black;
+}
+article #single h1, article #m-single-page h1{
+	background-color: #f538bf;
+	box-shadow: 2px 2px 3px ;
+}
+article #multiple h1{
+	background-color: #e394a6;
+	float: right;
+	box-shadow: -2px 2px 3px ;
+}
+article #s-multiple-page h1{
+	background-color: #e394a6;
+	box-shadow: -2px 2px 3px ;
+}
+article #single{
+	background-image: radial-gradient(circle at 100%, #fcd7f2 15%, #f538bf 17%, #ff78d9 24%, #ffb8eb);
+}
+article #multiple{
+	background-image: radial-gradient(circle at 0%, #b06879 15%, #e394a6 17%, #ab445c 24%, #781d32);
+}
+article #single:hover h1, article #multiple:hover h1, article #m-single-page:hover h1, article #s-multiple-page:hover h1{
+	color: white;
+}
+article #single:hover{
+	background-image: radial-gradient(circle at 100%, #c9abc1 15%, #c42b99 17%, #cf61b0 24%, #c28cb2);
+}
+article #multiple:hover{
+	background-image: radial-gradient(circle at 0%, #804b58 15%, #a16876 17%, #783041 24%, #42101c);
+}
+article #s-single-page, article #s-multiple-page, article #m-single-page, article #m-multiple-page{
+	margin: 0;
+}
+article #s-single-page{
+	background-image: linear-gradient(to bottom, #ff78d9 24%, #ffb8eb );
+}
+article #s-multiple-page{
+	background-image: linear-gradient(to left, #e394a6 17%, #ab445c 24%, #781d32);
+}
+article #m-single-page{
+	background-image: linear-gradient(to left, #f538bf 17%, #ff78d9 24%, #ffb8eb);
+}
+article #m-multiple-page{
+	background-image: linear-gradient(to bottom, #ab445c 24%, #781d32);
+}
+article #s-multiple-page, article #m-single-page{
+	height: 300px;
+}
+article #m-single-page:hover{
+	background-image: linear-gradient(to left, #c42b99 17%, #cf61b0 24%, #c28cb2);
+}
+article #s-multiple-page:hover{
+	background-image: linear-gradient(to left, #a16876 17%, #783041 24%, #42101c);
+}
+article #s-single-page h1, article #m-multiple-page h1{
+	padding-left: 20px;
+}
+article #s-single-page, article #m-multiple-page{
+	padding: 20px;
+}
+article #s-single-page .card, article #m-multiple-page .card{
+	width :300px;
+	margin: 20px;
+	display: inline-block;
+}
+article #s-single-page .card .card-body .btn{
+	background-color: #ffb8eb;
+	color: white;
+}
+article #m-multiple-page .card .card-body .btn{
+	background-color: #781d32;
+	color: white;
+}
+article #s-single-page .card .card-body .btn:hover{
+	background-color: #c28cb2;
+}
+article #m-multiple-page .card .card-body .btn:hover{
+	background-color: #42101c;
+}
+
+/*MOBILE VERSION*/
+@media only screen and (max-width: 575px){
+	footer{
+		font-size: 12px;
+	}
+	article #single, article #multiple{
+		width: 100%;
+		height: 50%;
+		padding: 0px;
+		float: none;
+	}
+	article #single{
+		background-image: radial-gradient(circle at bottom, #fcd7f2 15%, #f538bf 17%, #ff78d9 24%, #ffb8eb 80%);
+	}
+	article #multiple{
+		background-image: radial-gradient(circle at top, #b06879 15%, #e394a6 17%, #ab445c 24%, #781d32 80%);
+	}
+	article #single h1, article #multiple h1, article #s-multiple-page h1, article #m-single-page h1{
+		font-size: 18px;
+		margin-top: 30px;
+	}
+	article #s-single-page h1, article #m-multiple-page h1{
+		font-size: 18px;
+	}
+	article #single h1{
+		padding-left: 30px;
+	}
+	article #multiple h1{
+		padding-right: 30px;
+		margin-top: 220px;
+	}
+	article #single:hover{
+		background-image: radial-gradient(circle at bottom, #c9abc1 15%, #c42b99 17%, #cf61b0 24%, #c28cb2);
+	}
+	article #multiple:hover{
+		background-image: radial-gradient(circle at top, #804b58 15%, #a16876 17%, #783041 24%, #42101c);
+	}
+		article #s-single-page .card, article #m-multiple-page .card{
+		width: 80%;
+		margin: 20px;
+		display: inline-block;
+	}
+}
+
+/*TABLET VERSION*/
+@media only screen and (max-width: 768px) and (min-width: 576px){
+	footer{
+		font-size: 15px;
+	}
+	article #single, article #multiple{
+		width: 100%;
+		height: 50%;
+		padding: 0px;
+		float: none;
+	}
+	article #single{
+		background-image: radial-gradient(circle at bottom, #fcd7f2 15%, #f538bf 17%, #ff78d9 24%, #ffb8eb 80%);
+	}
+	article #multiple{
+		background-image: radial-gradient(circle at top, #b06879 15%, #e394a6 17%, #ab445c 24%, #781d32 80%);
+	}
+	article #single h1, article #multiple h1, article #s-multiple-page h1, article #m-single-page h1{
+		font-size: 21px;
+		margin-top: 60px;
+	}
+	article #s-single-page h1, article #m-multiple-page h1{
+		font-size: 21px;
+	}
+	article #single h1{
+		padding-left: 40px;
+	}
+	article #multiple h1{
+		padding-right: 40px;
+		margin-top: 200px;
+	}
+	article #single:hover{
+		background-image: radial-gradient(circle at bottom, #c9abc1 15%, #c42b99 17%, #cf61b0 24%, #c28cb2);
+	}
+	article #multiple:hover{
+		background-image: radial-gradient(circle at top, #804b58 15%, #a16876 17%, #783041 24%, #42101c);
+	}
+	article #s-single-page .card, article #m-multiple-page .card{
+		width: 80%;
+		margin: 20px;
+		display: inline-block;
+	}
+}
+
+/*LAPTOP VERSION*/
+@media only screen and (max-width: 1440px) and (min-width: 769px){
+	footer{
+		font-size: 18px;
+	}
+	article #single, article #multiple{
+		width: 50%;
+		height: 100%;
+		padding: 0px;
+		float: left;
+	}
+	article #single{
+		background-image: radial-gradient(circle at 100%, #fcd7f2 15%, #f538bf 17%, #ff78d9 24%, #ffb8eb 80%);
+	}
+	article #multiple{
+		background-image: radial-gradient(circle at 0%, #b06879 15%, #e394a6 17%, #ab445c 24%, #781d32 80%);
+	}
+	article #single h1, article #multiple h1, article #s-multiple-page h1, article #m-single-page h1{
+		font-size: 24px;
+		margin-top: 60px;
+	}
+	article #s-single-page h1, article #m-multiple-page h1{
+		font-size: 24px;
+	}
+	article #single h1{
+		padding-left: 50px;
+	}
+	article #multiple h1{
+		padding-right: 50px;
+	}
+	article #single:hover{
+		background-image: radial-gradient(circle at 100%, #c9abc1 15%, #c42b99 17%, #cf61b0 24%, #c28cb2);
+	}
+	article #multiple:hover{
+		background-image: radial-gradient(circle at 0%, #804b58 15%, #a16876 17%, #783041 24%, #42101c);
+	}
+	article #s-single-page .card, article #m-multiple-page .card{
+		width: 40%;
+		margin: 20px;
+		display: inline-block;
+	}
+}
+
+/*DESKTOP VERSION*/
+@media only screen and (min-width: 1441px){
+	footer{
+		font-size: 18px;
+	}
+	article #single, article #multiple{
+		width: 50%;
+		height: 100%;
+		padding: 0px;
+		float: left;
+	}
+	article #single{
+		background-image: radial-gradient(circle at 100%, #fcd7f2 15%, #f538bf 17%, #ff78d9 24%, #ffb8eb 80%);
+	}
+	article #multiple{
+		background-image: radial-gradient(circle at 0%, #b06879 15%, #e394a6 17%, #ab445c 24%, #781d32 80%);
+	}
+	article #single h1, article #multiple h1, article #s-multiple-page h1, article #m-single-page h1{
+		font-size: 24px;
+		margin-top: 60px;
+	}
+	article #s-single-page h1, article #m-multiple-page h1{
+		font-size: 24px;
+	}
+	article #single h1{
+		padding-left: 50px;
+	}
+	article #multiple h1{
+		padding-right: 50px;
+	}
+	article #single:hover{
+		background-image: radial-gradient(circle at 100%, #c9abc1 15%, #c42b99 17%, #cf61b0 24%, #c28cb2);
+	}
+	article #multiple:hover{
+		background-image: radial-gradient(circle at 0%, #804b58 15%, #a16876 17%, #783041 24%, #42101c);
+	}
+	article #s-single-page .card, article #m-multiple-page .card{
+		width: 300px;
+		margin: 20px;
+		display: inline-block;
+	}
+}
