@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Home Page</title>
+		<link type="text/css" rel="stylesheet" href="css/bootstrap.css">
+		<link type="text/css" rel="stylesheet" href="zelda.css">
+		<link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+		<script type="text/javascript">
+			//Executes when the page loads
+			function start(){
+				//Creates an event for the footer button
+				var btnOpen = document.getElementById("btnOpen").addEventListener("click", visit, false);
+				
+				//Checks if the user has inputted a color for the background and sets the background to that color
+				if(localStorage.getItem("color") != null){
+					document.body.setAttribute("style", "background-color:"+localStorage.getItem("color"));
+				}
+			}
+			
+			//Executes when the 'Visit Source' button in the footer is clicked
+			function visit(){
+				//Opens a window to a similar website
+				var browser = window.open("https://www.zeldadungeon.net/twilight-princess-walkthrough/", "_blank", "titlebar, menubar, toolbar, width=400, height=200");
+			}
+			window.addEventListener("load", start, false);
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="col-md-12 offset-0">
+				<nav class="navbar navbar-expand-lg navbar-light bg-light">
+					<div class="navbar-header">
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-expanded="false">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+					</div> 
+					<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+						<div class="navbar-nav">
+							<a  href="./index.html">Home</a>
+							<a  href="./Characters/index.html">Characters</a>
+							<a  href="./Side_Quests/index.html">Side Quests</a>
+							<a  href="./Twilight_Trivia/index.html">Twilight Trivia</a>	
+							<a  href="./Armor/index.html">Random Armor</a>
+							<a  href="./Login/index.html">Login</a>
+						</div>	
+					</div>
+				</nav>
+			</div>
+			<div class="col-md-12 offset-0">
+				<div class="banner">
+					<h1>LoZ Twilight Princess</h1>
+				</div>
+			</div>
+			<div class="col-md-12 offset-0">
+				<div class="body">
+					<img alt="Legend of Zelda: Twilight Princess Game Cover" id="cover" src="./images/cover.JPG">
+					<p>The game Legend of Zelda: Twilight Princess, is a game that takes place in the land of Hyrule. You 
+					play as the main character that you name. You start off as a normal villager of the Ordona Province, 
+					and are about to travel to Hyrule Castle to deliver a sword to the royal family. Little did you know 
+					that Hyrule is being invaded by strange monsters and your friends get caught in the process. As you 
+					were about to embark to Hyrule Castle, your friends get captured by monsters and just beyond the 
+					village lies a mysterious wall of darkness that grabs you into a realm of darkness. Within this realm 
+					you are afflicted by a great pain that causes you to pass out. You wake up to find yourself in a strange 
+					cage and encounter a mysterious imp. She offers to help you escape and save you r friends in exchange 
+					for your help in gathering objects that were locked away in temples. Now that Hyrule has been engulfed 
+					by the twilight, it is up to you to restore light to the land and stop the evil that plagues it.</p>
+				</div>
+			</div>
+			<div class="col-md-12 offset-0">
+				<div class="footer">
+					<p>This website is developed as an educational project. Certain materials are included under the fair 
+					use exemption of the U.S. Copyright Law and have been prepared according to the multimedia fair use 
+					guidelines and are restricted from further use.</p>
+					<p>All images were taken by Ashwin Paskar through the use of an iPhone</p>
+					<p>Here is a link to the style sheet: <a href="./zelda.css">zelda.css</a></p>
+					<form action="#">
+						<input type="button" id="btnOpen" value="Visit Source">
+					</form>
+					<script type="text/javascript">
+						//Displays the date the web page was last modified
+						var modified = new Date(document.lastModified);
+						var string = modified.toLocaleString();
+						document.writeln(string);
+					</script>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

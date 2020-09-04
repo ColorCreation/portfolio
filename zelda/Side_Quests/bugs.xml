@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<bugs>
+	
+	<bug>
+		<name>Ant</name>
+		<location>Kakariko Village</location>
+	</bug>
+	
+	<bug>
+		<name>Mantis</name>
+		<location>Great Bridge of Hylia</location>
+	</bug>
+	
+	<bug>
+		<name>Butterfly</name>
+		<location>Eastern Hyrule Field</location>
+	</bug>
+	
+	<bug>
+		<name>Phasmid</name>
+		<location>Bridge of Eldin</location>
+	</bug>
+	
+	<bug>
+		<name>Dayfly</name>
+		<location>Gerudo Desert</location>
+	</bug>
+	
+	<bug>
+		<name>Stag Beetle</name>
+		<location>Northern Hyrule Field</location>
+	</bug>
+	
+	<bug>
+		<name>Ladybug</name>
+		<location>South of Castle Town</location>
+	</bug>
+	
+	<bug>
+		<name>Grasshopper</name>
+		<location>Western Hyrule Field</location>
+	</bug>
+	
+	<bug>
+		<name>Beetle</name>
+		<location>Southern Hyrule Field</location>
+	</bug>
+	
+	<bug>
+		<name>Pillbug</name>
+		<location>Kakariko Gorge</location>
+	</bug>
+	
+	<bug>
+		<name>Snail</name>
+		<location>Sacred Grove</location>
+	</bug>
+	
+	<bug>
+		<name>Dragonfly</name>
+		<location>Zora River</location>
+	</bug>
+	
+</bugs>

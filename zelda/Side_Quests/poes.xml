@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<poes>
+	
+	<poe>
+		<number>4</number>
+		<location>Arbiter's Grounds</location>
+	</poe>
+	
+	<poe>
+		<number>1</number>
+		<location>Castle Town</location>
+	</poe>
+	
+	<poe>
+		<number>3</number>
+		<location>Cave of Ordeals</location>
+	</poe>
+	
+	<poe>
+		<number>2</number>
+		<location>City in the Sky</location>
+	</poe>
+	
+	<poe>
+		<number>1</number>
+		<location>Death Mountain</location>
+	</poe>
+	
+	<poe>
+		<number>1</number>
+		<location>Faron Woods</location>
+	</poe>
+	
+	<poe>
+		<number>8</number>
+		<location>Gerudo Desert</location>
+	</poe>
+	
+	<poe>
+		<number>2</number>
+		<location>Kakariko Graveyard</location>
+	</poe>
+	
+	<poe>
+		<number>1</number>
+		<location>Hidden Village</location>
+	</poe>
+	
+	<poe>
+		<number>2</number>
+		<location>Outside of Castle Town</location>
+	</poe>
+	
+	<poe>
+		<number>2</number>
+		<location>Kakariko Gorge</location>
+	</poe>
+	
+	<poe>
+		<number>1</number>
+		<location>Southern Hyrule Field</location>
+	</poe>
+	
+	<poe>
+		<number>3</number>
+		<location>Northern Hyrule Field</location>
+	</poe>
+	
+	<poe>
+		<number>1</number>
+		<location>South of Castle Town</location>
+	</poe>
+	
+	<poe>
+		<number>1</number>
+		<location>Great Bridge of Hylia</location>
+	</poe>
+	
+	<poe>
+		<number>2</number>
+		<location>Kakariko Village</location>
+	</poe>
+	
+	<poe>
+		<number>8</number>
+		<location>Lake Hylia</location>
+	</poe>
+	
+	<poe>
+		<number>3</number>
+		<location>Sacred Grove</location>
+	</poe>
+	
+	<poe>
+		<number>5</number>
+		<location>Snowpeak</location>
+	</poe>
+	
+	<poe>
+		<number>3</number>
+		<location>Snowpeak Ruins</location>
+	</poe>
+	
+	<poe>
+		<number>3</number>
+		<location>Temple of Time</location>
+	</poe>
+	
+	<poe>
+		<number>1</number>
+		<location>Upper Zora River</location>
+	</poe>
+	
+	<poe>
+		<number>2</number>
+		<location>Zora's Domain</location>
+	</poe>
+	
+</poes>

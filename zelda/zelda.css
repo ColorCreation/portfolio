@@ -1,0 +1,119 @@
+body{
+	background-color: antiquewhite;
+}
+nav{
+	background-color: green;
+	background-image: linear-gradient(green, limegreen);
+}
+.navbar-nav{
+	margin: 0px auto;
+}
+.navbar-nav a{
+	border-top: solid 1px darkolivegreen;
+	border-bottom: solid 1px darkolivegreen;
+	border-left: solid 1px darkolivegreen;
+	border-right: solid 1px darkolivegreen;
+	padding: 20px;
+}
+.navbar-nav a:link, .navbar-nav a:visited{
+	color: yellow;
+}
+.navbar-nav a:hover, .navbar-nav a:active{
+	color: red;
+	text-decoration: none;
+	background-image: linear-gradient(limegreen, green);
+}
+.banner{
+	width: 100%;
+	height: 100%;
+	background-color: white;
+}
+.banner h1{
+	text-align: center;
+	font-family: 'Abril Fatface', cursive;
+	color: red;
+	text-shadow: -3px 1px black;
+}
+.body{
+	padding: 20px 20px;
+}
+.footer{
+	background-color: green;
+	background-image: linear-gradient(limegreen, green);
+}
+.footer p{
+	font-size: 10pt;
+	color: yellow;
+	margin: 20px;
+}
+.footer p a:link, .footer p a:visited{
+	color: yellow;
+	text-decoration: underline;
+}
+.footer p a:hover{
+	color:red;
+	text-decoration: underline;
+}
+table{
+	width: 60%;
+	margin: 20px auto;
+}
+table th{
+	text-align: center;
+}
+table th, table td{
+	border: 2px solid darkolivegreen;
+	padding: 10px;
+}
+table thead tr{
+	background-color: green;
+	opacity: .75;
+	color: red;
+}
+table tbody tr:nth-child(n){
+	background-color: limegreen !important;
+	opacity: .75;
+	color: yellow;
+}
+table tbody tr:nth-child(2n){
+	background-color: green !important;
+}
+.center{
+	text-align: center;
+}
+h3{
+	color: midnightblue;
+}
+.body #cover{
+	width: 200px;
+	float: left;
+	height: 100%;
+	margin-right: 20px;
+	border: 2px solid red;
+}
+.picture, .picture2{
+	width: 400px;
+	margin: 0px auto;
+}
+.picture img{
+	width: 400px;
+}
+.picture2 img{
+	width: 400px;
+	transform: rotate(90deg);
+}
+.picture3{
+	width: 400px;
+	height: 400px;
+	margin: 0 auto;
+}
+.picture3 img{
+	width: 400px;
+}
+#greet{
+	text-align: center;
+	font-size: 30pt;
+}
+#portal{
+	display: none;
+}

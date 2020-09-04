@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Login</title>
+		<link type="text/css" rel="stylesheet" href="../css/bootstrap.css">
+		<link type="text/css" rel="stylesheet" href="../zelda.css">
+		<link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+		<script type="text/javascript">
+			//Creates an event for the footer button, and logout button
+			function start(){
+				//Checks if the Local Storage has a name object. If not, then the user is prompted to input a name
+				if(localStorage.getItem("name") == null){
+					var name = window.prompt("Please sign in using your name.");
+					localStorage.setItem("name", name);
+					var inputColor = window.prompt("Please enter a color for the background.");
+					localStorage.setItem("color", inputColor);
+				}
+				//Gets the name from the Local Storage and creates a greeting for the user
+				if(localStorage.getItem("color") != null){
+					document.body.setAttribute("style", "background-color:"+localStorage.getItem("color"));
+				}
+				var test = localStorage.getItem("name");  
+				var greeting = "Greetings " + test;
+				document.getElementById("greet").innerHTML = greeting;
+				var btnLogout = document.getElementById("btnLogout").addEventListener("click", logout, false);
+				var btnOpen = document.getElementById("btnOpen").addEventListener("click", visit, false);
+			}
+			//Clears localStorage name and declares that the user has logged out. The button is also hidden
+			function logout(){
+				localStorage.clear();
+				document.getElementById("greet").innerHTML = "You have logged out<br>Please 'refresh' the page to login again.";
+				var btnLogout = document.getElementById("btnLogout").setAttribute("type", "hidden");
+			}
+			//Opens a window to a similar website
+			function visit(){
+				var browser = window.open("https://www.zeldadungeon.net/twilight-princess-walkthrough/", "_blank", "titlebar, menubar, toolbar, width=400, height=200");
+			}
+			window.addEventListener("load", start, false);
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="col-md-12 offset-0">
+				<nav class="navbar navbar-expand-lg navbar-light bg-light">
+					<div class="navbar-header">
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-expanded="false">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+					</div> 
+					<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+						<div class="navbar-nav">
+							<a  href="../index.html">Home</a>
+							<a  href="../Characters/index.html">Characters</a>
+							<a  href="../Side_Quests/index.html">Side Quests</a>
+							<a  href="../Twilight_Trivia/index.html">Twilight Trivia</a>	
+							<a  href="../Armor/index.html">Random Armor</a>
+							<a  href="./index.html">Login</a>
+						</div>	
+					</div>
+				</nav>
+			</div>
+			<div class="col-md-12 offset-0">
+				<div class="banner">
+					<h1>LoZ Twilight Princess</h1>
+				</div>
+			</div>
+			<div class="col-md-12 offset-0">
+				<div class="body">
+					<p id="greet"></p>
+					<form action="#">
+						<input type="button" id="btnLogout" value="Logout"/>
+					</form>
+				</div>
+			</div>
+			<div class="col-md-12 offset-0">
+				<div class="footer">
+					<p>This website is developed as an educational project. Certain materials are included under the fair 
+					use exemption of the U.S. Copyright Law and have been prepared according to the multimedia fair use 
+					guidelines and are restricted from further use.</p>
+					<p>All images were taken by Ashwin Paskar through the use of an iPhone</p>
+					<p>Here is a link to the style sheet: <a href="./zelda.css">zelda.css</a></p>
+					<form action="#">
+						<input type="button" id="btnOpen" value="Visit Source">
+					</form>
+					<script type="text/javascript">
+						//Displays the date the web page was last modified
+						var modified = new Date(document.lastModified);
+						var string = modified.toLocaleString();
+						document.writeln(string);
+					</script>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

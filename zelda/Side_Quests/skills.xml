@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<skills>
+	
+	<skill>
+		<number>1</number>
+		<name>Ending Blow</name>
+		<desc>After knocking your enemy to the ground, you immediately strike them in their heart.</desc>
+		<stone>No howling stone</stone>
+		<location>Learned at the entrance to the Forest Temple.</location>
+	</skill>
+	
+	<skill>
+		<number>2</number>
+		<name>Shield Bash</name>
+		<desc>Hold out your shield, and ram it against your enemy to break their defenses.</desc>
+		<stone>The howling stone can be found along the path to Death Mountain.</stone>
+		<location>The skill can be learned at Ordon Spring.</location>
+	</skill>
+	
+	<skill>
+		<number>3</number>
+		<name>Back Slice</name>
+		<desc>Side step and roll till you are behind your enemy, and then perform a jump spin while slashing your enemy's back.</desc>
+		<stone>The howling stone can be found at the cliff in the Upper Zora's River near Iza's House.</stone>
+		<location>The skill can be learned outside the east entrance to Castle Town.</location>
+	</skill>
+	
+	<skill>
+		<number>4</number>
+		<name>Helm Splitter</name>
+		<desc>Use the Shield Bash technique to break your enemy's defenses, and then jump over them while swinging your sword to slice their helm.</desc>
+		<stone>The howling stone can be found along the path to the Sacred Grove in Faron Woods.</stone>
+		<location>The skill can be learned near the southern entrance to Castle Town.</location>
+	</skill>
+	
+	<skill>
+		<number>5</number>
+		<name>Mortal Draw</name>
+		<desc>Leave yourself defenseless and allow your enemies to approach you. When the time is right, draw your sword to slash through their armor.</desc>
+		<stone>The howling stone can be found on a cliff near the watchtower at Lake Hylia.</stone>
+		<location>The skill can be learned at the entrance to the Arbiter's Grounds.</location>
+	</skill>
+	
+	<skill>
+		<number>6</number>
+		<name>Jump Strike</name>
+		<desc>Focus on your enemy and charge your attack. When the light reaches the tip of your blade, jump and strike your nearby enemies and create a shockwave that sends them to the ground.</desc>
+		<stone>The howling stone can be found atop of Snowpeak Mountain.</stone>
+		<location>The skill can be learned at the Graveyard in Kakariko Village, behind Chief Renado's house.</location>
+	</skill>
+	
+	<skill>
+		<number>7</number>
+		<name>Great Spin</name>
+		<desc>Provided that your are at full health, you will be able to perform a spin attack that is more powerful than normal.</desc>
+		<stone>The howling stone can be found at Hidden Village behind a window.</stone>
+		<location>The skill can be learned at the entrance to Hyrule Castle.</location>
+	</skill>
+	
+</skills>

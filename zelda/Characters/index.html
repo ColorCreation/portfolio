@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Characters</title>
+		<link type="text/css" rel="stylesheet" href="../css/bootstrap.css">
+		<link type="text/css" rel="stylesheet" href="../zelda.css">
+		<link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+		<script type="text/javascript">
+			//Executes when the page loads
+			function start(){
+				//Creates an event for the footer button
+				var btnOpen = document.getElementById("btnOpen").addEventListener("click", visit, false);
+				
+				//Checks if the user has inputted a color for the background and sets the background to that color
+				if(localStorage.getItem("color") != null){
+					document.body.setAttribute("style", "background-color:"+localStorage.getItem("color"));
+				}
+			}
+			
+			//Executes when the 'Visit Source' button in the footer is clicked
+			function visit(){
+				//Opens a window to a similar website
+				var browser = window.open("https://www.zeldadungeon.net/twilight-princess-walkthrough/", "_blank", "titlebar, menubar, toolbar, width=400, height=200");
+			}
+			window.addEventListener("load", start, false);
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="col-md-12 offset-0">
+				<nav class="navbar navbar-expand-lg navbar-light bg-light">
+					<div class="navbar-header">
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-expanded="false">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+					</div> 
+					<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+						<div class="navbar-nav">
+							<a  href="../index.html">Home</a>
+							<a  href="./index.html">Characters</a>
+							<a  href="../Side_Quests/index.html">Side Quests</a>
+							<a  href="../Twilight_Trivia/index.html">Twilight Trivia</a>
+							<a  href="../Armor/index.html">Random Armor</a>
+							<a  href="../Login/index.html">Login</a>
+						</div>	
+					</div>
+				</nav>
+			</div>
+			<div class="col-md-12 offset-0">
+				<div class="banner">
+					<h1>LoZ Twilight Princess</h1>
+				</div>
+			</div>
+			<div class="col-md-12 offset-0">
+				<div class="body">
+					<h3>Ilia</h3>
+					<p>Ilia is the main character's best friend who grew up with him in Ordon Village. She is very fond of 
+					animals, especially your horse. She gets amnesia after she is captured by monsters.</p>
+					<h3>Zelda</h3>
+					<p>Zelda is the princess of the royal family of Hyrule. She was imprisoned in her own castle when Zant 
+					invaded Hyrule. Just like you, and ganondorf, she was blessed by the gods and used her powers to allow 
+					Midna to exist in the Sacred Realm.</p>
+					<h3>Midna</h3>
+					<p>Midna is an imp of the Twili. her kind were banished to the Twilight Realm after her ancestors 
+					tried to take over the Sacred Realm. She does not view Zant as the true king of Twilight. For some 
+					reason, she has knowledge of ancient dark magic and the history of Hyrule. It is later revealed in 
+					the game that she is the Twilight Princess.</p>
+					<h3>Renado</h3>
+					<p>Renado is a shaman that lives in Kakariko Village</p>
+					<h3>Zant</h3>
+					<p>Zant is a self-proclaimed King of Twilight. He invaded Hyrule and overthrew the royal family with 
+					his immense power. After defeating the royal family, he plunged Hyrule into the Twilight, turning all 
+					the inhabitants into small lights that are unaware of what is going on.</p>
+					<h3>Ganondorf</h3>
+					<p>Ganondorf is a bandit that terrorized the citizens of Hyrule with his magic. His arrogance caused 
+					him to be captured and sentenced to death. To the surprise of many, he was blessed by the gods. In 
+					order to prevent him from bringing harm to Hyrule, he was banished to the Twilight Realm. There he 
+					took refuge in Zant until he could finally manifest his body in the Sacred Realm again.</p>
+					</div>
+			</div>
+			<div class="col-md-12 offset-0">
+				<div class="footer">
+					<p>This website is developed as an educational project. Certain materials are included under the fair 
+					use exemption of the U.S. Copyright Law and have been prepared according to the multimedia fair use 
+					guidelines and are restricted from further use.</p>
+					<p>All images were taken by Ashwin Paskar through the use of an iPhone</p>
+					<p>Here is a link to the style sheet: <a href="./zelda.css">zelda.css</a></p>
+					<form action="#">
+						<input type="button" id="btnOpen" value="Visit Source">
+					</form>
+					<script type="text/javascript">
+						//Displays the date the web page was last modified
+						var modified = new Date(document.lastModified);
+						var string = modified.toLocaleString();
+						document.writeln(string);
+					</script>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

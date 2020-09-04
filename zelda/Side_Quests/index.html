@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Side Quests</title>
+		<link type="text/css" rel="stylesheet" href="../css/bootstrap.css">
+		<link type="text/css" rel="stylesheet" href="../zelda.css">
+		<link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+		
+		<script type="text/javascript">
+			//Executes when the cursor moves over the skill image
+			function mOver(){
+				//Changes the src attribute to a new one
+				document.getElementById("ancientHero").setAttribute("src", "../images/skill2.JPG");
+			}
+			
+			//Executes when the cursor moves off of the skill image
+			function mOut(){
+				//Changes the src attribute back to the original one
+				document.getElementById("ancientHero").setAttribute("src", "../images/skill1.JPG");
+			}
+			
+			//Executes when the page loads
+			function start(){
+				//Creates an event for the footer button
+				var btnOpen = document.getElementById("btnOpen").addEventListener("click", visit, false);
+				
+				//Checks if the user has inputted a color for the background and sets the background to that color
+				if(localStorage.getItem("color") != null){
+					document.body.setAttribute("style", "background-color:"+localStorage.getItem("color"));
+				}
+				
+				//Creates an event for the skill image when the cursor goes over the skill image and off
+				var imgSkill = document.getElementById("ancientHero");
+				imgSkill.addEventListener("mouseover", mOver, false);
+				imgSkill.addEventListener("mouseout", mOut, false);
+			}
+			
+			//Executes when the 'Visit Source' button in the footer is clicked
+			function visit(){
+				//Opens a window to a similar website
+				var browser = window.open("https://www.zeldadungeon.net/twilight-princess-walkthrough/", "_blank", "titlebar, menubar, toolbar, width=400, height=200");
+			}
+			window.addEventListener("load", start, false);
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="col-md-12 offset-0">
+				<nav class="navbar navbar-expand-lg navbar-light bg-light">
+					<div class="navbar-header">
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-expanded="false">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+					</div> 
+					<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+						<div class="navbar-nav">
+							<a  href="../index.html">Home</a>
+							<a  href="../Characters/index.html">Characters</a>
+							<a  href="./index.html">Side Quests</a>
+							<a  href="../Twilight_Trivia/index.html">Twilight Trivia</a>	
+							<a  href="../Armor/index.html">Random Armor</a>
+							<a  href="../Login/index.html">Login</a>
+						</div>	
+					</div>
+				</nav>
+			</div>
+			<div class="col-md-12 offset-0">
+				<div class="banner">
+					<h1>LoZ Twilight Princess</h1>
+				</div>
+			</div>
+			<div class="col-md-12 offset-0">
+			<div class="body">
+				<p id="top">Within Legend of Zelda: Twilight Princess, there are multiple side quests such as:</p>
+				<ul>
+					<li><a href="#skill">The Hidden Skills</a></li>
+					<li><a href="#bug">Agitha's Golden Bugs</a></li>
+					<li><a href="#soul">Jovani's Soul</a></li>
+					
+				</ul>
+				<h3 class="center" id="skill">The Hidden Skills</h3>
+				<div class="picture">
+					<img id="ancientHero" alt="Hero's spirit in wolf form" src="../images/skill1.JPG">
+				</div>
+				<p>There are seven hidden skills that can be learned in the game. The first one will be learned during the main quest, but the other skills will require that you seek out the Howling Stones. When you are in your wolf form, you must go near the Howling Stones and howl the tune coming from it. Once you have successfully played the tune, a wolf apparition will appear somewhere in Hyrule to teach you a one of the Hidden Skills.</p><br>
+				<input type="button" onclick="loadSkills()" value="View Info"/>
+				<table id="dsSkills"></table>
+				<script>
+					//Gathers the data from the xml file 'skills' and displays it as a table
+					function loadSkills() {
+						//XMLHttpRequest object
+						var skillRequest = new XMLHttpRequest();
+						skillRequest.onreadystatechange = function() {
+							//If request completed successfully and responseXML is non-null
+							if (this.readyState == 4 && this.status == 200) {
+								getSkills(this);
+							}
+						};
+						//Prepare the request
+						skillRequest.open("GET", "skills.xml", true);
+						//Send the request
+						skillRequest.send();
+					}
+					function getSkills(xml) {
+						//Get the skills from the responseXML
+						var skills = xml.responseXML;
+						
+						//Fills in the table
+						var table = "<thead><tr><th>Number</th><th>Skill</th><th>Description</th><th>Location</th></tr></thead>";
+						var x = skills.getElementsByTagName("skill");
+						table += "<tbody>";
+						for (var i = 0; i <x.length; i++) { 
+							table += "<tr><td>" +
+							x[i].getElementsByTagName("number")[0].childNodes[0].nodeValue +
+							"</td><td>" +
+							x[i].getElementsByTagName("name")[0].childNodes[0].nodeValue +
+							"</td><td>" +
+							x[i].getElementsByTagName("desc")[0].childNodes[0].nodeValue +
+							"</td><td><ul><li>" +
+							x[i].getElementsByTagName("stone")[0].childNodes[0].nodeValue +
+							"</li><li>" +
+							x[i].getElementsByTagName("location")[0].childNodes[0].nodeValue +
+							"</li></ul></td></tr>";
+						}
+						table += "</tbody>";
+						
+						//Applies HTML to the table tag
+						document.getElementById("dsSkills").innerHTML = table;
+					}
+				</script>
+				<p class="center"><a href="#top">Back to the top of the page</a></p>
+				<h3 class="center" id="bug">Agitha's Golden Bugs</h3>
+				<div class="picture">
+					<img alt="Agitha" src="../images/agitha1.JPG">
+				</div>
+				<p>Agitha is a girl who lives in Castle Town and has a fondness for bugs, especially golden ones. She will ask you gather these bugs for her and in return will give you Rupees in exchange. There are twelve types of golden bugs and one of each gender (a total of 24 bugs). Once you give her one bug, she will give a larger wallet to hold 600 Rupees. When you have finally given completed her quest, she will give you a giant wallet to hold 1000 Rupees.</p><br>
+				<input type="button" onclick="loadBugs()" value="View Info"/>
+				<table id="dsBugs"></table>
+				<script>
+					//Gathers the data from the xml file 'bugs' and displays it as a table
+					function loadBugs() {
+						//XMLHttpRequest object
+						var bugRequest = new XMLHttpRequest();
+						bugRequest.onreadystatechange = function() {
+							//If request completed successfully and responseXML is non-null
+							if (this.readyState == 4 && this.status == 200) {
+								getBugs(this);
+							}
+						};
+						//Prepare the request
+						bugRequest.open("GET", "bugs.xml", true);
+						//Send the request
+						bugRequest.send();
+					}
+					function getBugs(xml) {
+						//Get the bugs from the responseXML
+						var bugs = xml.responseXML;
+						
+						//Fills in the table
+						var table="<thead><tr><th>Bug</th><th>Location</th></tr></thead>";
+						var x = bugs.getElementsByTagName("bug");
+						table += "<tbody>";
+						for (var i = 0; i <x.length; i++) { 
+							table += "<tr><td>" +
+							x[i].getElementsByTagName("name")[0].childNodes[0].nodeValue +
+							"</td><td>" +
+							x[i].getElementsByTagName("location")[0].childNodes[0].nodeValue +
+							"</td></tr>";
+						}
+						table += "</tbody>";
+						
+						//Applies HTML to the table tag
+						document.getElementById("dsBugs").innerHTML = table;
+					}
+				</script>
+				<p class="center"><a href="#top">Back to the top of the page</a></p>
+				<h3 class="center" id="soul">Jovani's Soul</h3>
+				<div class="picture">
+					<img alt="Jovani" src="../images/jovani.JPG">
+				</div>
+				<p>Jovani is a man who lives in Castle Town and was turned into a solid gold statue after selling his soul to be rich. He only wishes to returned to normal so that he can be with his girlfriend again, and will ask you to find all the poes that contain a fraction of his soul. There are sixty poes spread across Hyrule, and they only appear during the night. Once you collect twenty poe souls, Jovani will be able to move again, but will still be made of gold. When you have collected all the poe souls, he will return to normal.</p><br>
+				<input type="button" onclick="loadPoes()" value="View Info"/>
+				<table id="dsPoes"></table>
+				<script>
+					//Gathers the data from the xml file 'poes' and displays it as a table
+					function loadPoes() {
+						//XMLHttpRequest object
+						var poeRequest = new XMLHttpRequest();
+						poeRequest.onreadystatechange = function() {
+							//If request completed successfully and responseXML is non-null
+							if (this.readyState == 4 && this.status == 200) {
+								getPoes(this);
+							}
+						};
+						//Prepare the request
+						poeRequest.open("GET", "poes.xml", true);
+						//Send the request
+						poeRequest.send();
+					}
+					function getPoes(xml) {
+						//Get the poes from the responseXML
+						var poes = xml.responseXML;
+						
+						//Fills in the table
+						var table="<thead><tr><th>Amount of Poes</th><th>General Location</th></tr></thead>";
+						var x = poes.getElementsByTagName("poe");
+						table += "<tbody>";
+						for (var i = 0; i <x.length; i++) { 
+							table += "<tr><td>" +
+							x[i].getElementsByTagName("number")[0].childNodes[0].nodeValue +
+							"</td><td>" +
+							x[i].getElementsByTagName("location")[0].childNodes[0].nodeValue +
+							"</td></tr>";
+						}
+						table += "</tbody>";
+						
+						//Applies HTML to the table tag
+						document.getElementById("dsPoes").innerHTML = table;
+					}
+				</script>
+				<p class="center"><a href="#top">Back to the top of the page</a></p>
+			</div>
+			</div>
+			<div class="col-md-12 offset-0">
+				<div class="footer">
+					<p>This website is developed as an educational project. Certain materials are included under the fair 
+					use exemption of the U.S. Copyright Law and have been prepared according to the multimedia fair use 
+					guidelines and are restricted from further use.</p>
+					<p>All images were taken by Ashwin Paskar through the use of an iPhone</p>
+					<p>Here is a link to the style sheet: <a href="../zelda.css">zelda.css</a></p>
+					<form action="#">
+						<input type="button" id="btnOpen" value="Visit Source">
+					</form>
+					<script type="text/javascript">
+						//Displays the date the web page was last modified
+						var modified = new Date(document.lastModified);
+						var string = modified.toLocaleString();
+						document.writeln(string);
+					</script>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

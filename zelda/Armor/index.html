@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Random Armor</title>
+		<link type="text/css" rel="stylesheet" href="../css/bootstrap.css">
+		<link type="text/css" rel="stylesheet" href="../zelda.css">
+		<link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+		<script type="text/javascript">
+			//Arrays for the armor images, descriptions, and alt text
+			var armors = new Array("armor1.JPG", "armor2.JPG", "armor3.JPG");
+			var armorText = new Array("Hero's Clothes", "Zora Armor", "Magic Armor");
+			var texts = new Array("This armor was once worn from the hero of the past. It has no special powers, but it suits you.", "This armor was created by the Zoran king. It is imbued with the power to let you brethe underwater.", "This armor a very rare item. It allows you to become invincible for as long as you have rupees in your wallet.");
+			
+			//Executes when the page loads
+			function start(){
+				randomize();
+				//Creates an event for the footer button
+				var btnOpen = document.getElementById("btnOpen").addEventListener("click", visit, false);
+				
+				//Checks if the user has inputted a color for the background and sets the background to that color
+				if(localStorage.getItem("color") != null){
+					document.body.setAttribute("style", "background-color:"+localStorage.getItem("color"));
+				}
+			}
+			
+			//Executes when the page loads
+			function randomize(){
+				//Identifies the html elements by their id
+				var armor = document.getElementById("randomImage");
+				var description = document.getElementById("randomText");
+				
+				//Randomly selects an array index and displays the array objects that correspond to the index
+				var number = Math.floor(Math.random() * 3);
+				armor.setAttribute("src", "../images/"+armors[number]);
+				armor.setAttribute("alt", armorText[number]);
+				description.innerHTML = texts[number];
+			}
+			
+			//Executes when the 'Visit Source' button in the footer is clicked
+			function visit(){
+				//Opens a window to a similar website
+				var browser = window.open("https://www.zeldadungeon.net/twilight-princess-walkthrough/", "_blank", "titlebar, menubar, toolbar, width=400, height=200");
+			}
+			window.addEventListener("load", start, false);
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="col-md-12 offset-0">
+				<nav class="navbar navbar-expand-lg navbar-light bg-light">
+					<div class="navbar-header">
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-expanded="false">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+					</div> 
+					<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+						<div class="navbar-nav">
+							<a  href="../index.html">Home</a>
+							<a  href="../Characters/index.html">Characters</a>
+							<a  href="../Side_Quests/index.html">Side Quests</a>
+							<a  href="../Twilight_Trivia/index.html">Twilight Trivia</a>
+							<a  href="./index.html">Random Armor</a>
+							<a  href="../Login/index.html">Login</a>
+						</div>	
+					</div>
+				</nav>
+			</div>
+			<div class="col-md-12 offset-0">
+				<div class="banner">
+					<h1>LoZ Twilight Princess</h1>
+				</div>
+			</div>
+			<div class="col-md-12 offset-0">
+				<div class="body">
+					<div class="picture2">
+						<img alt="" id="randomImage" src="">
+					</div>
+					<p id="randomText"></p>
+				</div>
+			</div>
+			<div class="col-md-12 offset-0">
+				<div class="footer">
+					<p>This website is developed as an educational project. Certain materials are included under the fair 
+					use exemption of the U.S. Copyright Law and have been prepared according to the multimedia fair use 
+					guidelines and are restricted from further use.</p>
+					<p>All images were taken by Ashwin Paskar through the use of an iPhone</p>
+					<p>Here is a link to the style sheet: <a href="./zelda.css">zelda.css</a></p>
+					<form action="#">
+						<input type="button" id="btnOpen" value="Visit Source">
+					</form>
+					<script type="text/javascript">
+						//Displays the date the web page was last modified
+						var modified = new Date(document.lastModified);
+						var string = modified.toLocaleString();
+						document.writeln(string);
+					</script>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

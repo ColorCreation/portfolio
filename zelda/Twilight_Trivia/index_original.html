@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Twilight Trivia</title>
+		<link type="text/css" rel="stylesheet" href="../css/bootstrap.css">
+		<link type="text/css" rel="stylesheet" href="../zelda.css">
+		<link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+		<script type="text/javascript">
+			//Executes when the page loads
+			function start(){
+				//Creates an event for the footer button
+				var btnOpen = document.getElementById("btnOpen").addEventListener("click", visit, false);
+				
+				//Checks if the user has inputted a color for the background and sets the background to that color
+				if(localStorage.getItem("color") != null){
+					document.body.setAttribute("style", "background-color:"+localStorage.getItem("color"));
+				}
+			}
+			
+			//Executes when the 'Visit Source' button in the footer is clicked
+			function visit(){
+				//Opens a window to a similar website
+				var browser = window.open("https://www.zeldadungeon.net/twilight-princess-walkthrough/", "_blank", "titlebar, menubar, toolbar, width=400, height=200");
+			}
+			window.addEventListener("load", start, false);
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="col-md-12 offset-0">
+				<nav class="navbar navbar-expand-lg navbar-light bg-light">
+					<div class="navbar-header">
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-expanded="false">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+					</div> 
+					<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+						<div class="navbar-nav">
+							<a  href="../index.html">Home</a>
+							<a  href="../Characters/index.html">Characters</a>
+							<a  href="../Side_Quests/index.html">Side Quests</a>
+							<a  href="./index.html">Twilight Trivia</a>	
+							<a  href="../Armor/index.html">Random Armor</a>
+							<a  href="../Login/index.html">Login</a>
+						</div>	
+					</div>
+				</nav>
+			</div>
+			<div class="col-md-12 offset-0">
+				<div class="banner">
+					<h1>LoZ Twilight Princess</h1>
+				</div>
+			</div>
+			<div class="col-md-12 offset-0">
+				<div class="body">
+					<form method="POST" action="result.html" autocomplete="on">
+						<label>Name:</label>
+						<input type="text" name="name"/><br><br>
+						
+						<label>Email:</label>
+						<input type="email" name="email"/><br><br>
+						
+						<label>Who is the patriarch of the Goron tribe?</label><br>
+						<input type="radio" name="goron" value="false"/>
+						<label>Gorko</label><br>
+						<input type="radio" name="goron" value="false"/>
+						<label>Daruk</label><br>
+						<input type="radio" name="goron" value="true"/>
+						<label>Darbus</label><br>
+						<input type="radio" name="goron" value="false"/>
+						<label>Darunia</label><br><br>
+						
+						<label>Which of these items can be contained in a bottle? (Select all that apply)</label><br>
+						<input type="checkbox" name="bottle" value="true"/>
+						<label>Water</label><br>
+						<input type="checkbox" name="bottle" value="true"/>
+						<label>Hot Spring Water</label><br>
+						<input type="checkbox" name="bottle" value="false"/>
+						<label>Fish</label><br>
+						<input type="checkbox" name="bottle" value="true"/>
+						<label>Milk</label><br>
+						<input type="checkbox" name="bottle" value="true"/>
+						<label>Lantern Oil</label><br>
+						<input type="checkbox" name="bottle" value="true"/>
+						<label>Great Fairy's Tears</label><br>
+						<input type="checkbox" name="bottle" value="true"/>
+						<label>Chu Jelly</label><br>
+						<input type="checkbox" name="bottle" value="false"/>
+						<label>Poe</label><br>
+						<input type="checkbox" name="bottle" value="true"/>
+						<label>Potion</label><br>
+						<input type="checkbox" name="bottle" value="true"/>
+						<label>Fairies</label><br>
+						<input type="checkbox" name="bottle" value="false"/>
+						<label>Bugs</label><br><br>
+						
+						<label>Who is the heir to the Zora throne?</label><br>
+						<input type="radio" name="zora" value="false"/>
+						<label>Ruto</label><br>
+						<input type="radio" name="zora" value="true"/>
+						<label>Ralis</label><br>
+						<input type="radio" name="zora" value="false"/>
+						<label>Mikau</label><br>
+						<input type="radio" name="zora" value="false"/>
+						<label>Lulu</label><br><br>
+						
+						<label>Who is Link's childhood friend?</label><br>
+						<input type="text" name="friend" list="friends" placeholder="Select one"/><br><br>
+						<datalist id="friends">
+							<option value="Colin">
+							<option value="Beth">
+							<option value="Ilia">
+							<option value="Malo">
+							<option value="Talo">
+							<option value="Rusl">
+							<option value="Fado">
+						</datalist>
+						
+						<input type="reset" name="reset" value="Reset"/>
+						<input type="submit" name="submit" value="Submit"/>
+					</form>
+				</div>
+			</div>
+			<div class="col-md-12 offset-0">
+				<div class="footer">
+					<p>This website is developed as an educational project. Certain materials are included under the fair 
+					use exemption of the U.S. Copyright Law and have been prepared according to the multimedia fair use 
+					guidelines and are restricted from further use.</p>
+					<p>All images were taken by Ashwin Paskar through the use of an iPhone</p>
+					<p>Here is a link to the style sheet: <a href="../zelda.css">zelda.css</a></p>
+					<form action="#">
+						<input type="button" id="btnOpen" value="Visit Source">
+					</form>
+					<script type="text/javascript">
+						//Displays the date the web page was last modified
+						var modified = new Date(document.lastModified);
+						var string = modified.toLocaleString();
+						document.writeln(string);
+					</script>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

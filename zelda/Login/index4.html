@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Login</title>
+		<link type="text/css" rel="stylesheet" href="../css/bootstrap.css">
+		<link type="text/css" rel="stylesheet" href="../zelda.css">
+		<link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+		<script type="text/javascript">
+			//Array for the login greeting
+			var greetings = ["Greetings ","Hello ","Welcome to Hyrule ","Enter the Twilight Realm "];
+			//Counter for the greetings array
+			var i = 1;
+			
+			//Executes when the page loads
+			function start(){
+				//Checks if the Local Storage has a name object. If not, then the user is prompted to input a name and color
+				if(localStorage.getItem("name") == null){
+					//User's prompted name which is set into the Local Storage
+					var name = window.prompt("Please sign in using your name.");
+					localStorage.setItem("name", name);
+					
+					//User's prompted background color which is set into the Local Storage
+					var inputColor = window.prompt("Please enter a color for the background.");
+					localStorage.setItem("color", inputColor);
+					
+					//Default Greeting is set in the Local Storage
+					localStorage.setItem("greeting", greetings[0]);
+				}
+				
+				//Checks if the user has inputted a color for the background and sets the background to that color
+				if(localStorage.getItem("color") != null){
+					document.body.setAttribute("style", "background-color:"+localStorage.getItem("color"));
+				}
+				
+				//Creates a greeting string from the Local Storage and displays it in the body
+				var greeting = localStorage.getItem("greeting") + localStorage.getItem("name");
+				document.getElementById("greet").innerHTML = greeting;
+				
+				//Finds the portal image and calls a fade in effect function
+				var imgPortal = document.getElementById("portal");
+				var opacity = 0;
+				var id = setInterval(fadeIn, 25);
+				
+				//Creates a fade in effect for the portal image
+				function fadeIn(){
+					//Checks if the opacity is 100%
+					if(opacity == 1){
+						//Stops the fade in effect
+						clearInterval(id);
+					}
+					else{
+						//Adds to the opacity value and sets the image opacity
+						opacity += 0.01;
+						imgPortal.setAttribute("style", "opacity: " + opacity);
+					}
+				}
+				
+				//Creates an event for the footer button, logout button, background button, and greeting button
+				var btnColor = document.getElementById("btnColor").addEventListener("click", changeColor, false);
+				var btnGreeting = document.getElementById("btnGreeting").addEventListener("click", changeGreeting, false);
+				var btnLogout = document.getElementById("btnLogout").addEventListener("click", logout, false);
+				var btnOpen = document.getElementById("btnOpen").addEventListener("click", visit, false);
+			}
+			
+			//Executes when the 'Change Background Color' button is clicked
+			function changeColor(){
+				//User's prompted background color which is set into the Local Storage and changes the background color
+				var inputColor = window.prompt("Please enter a color for the background.");
+				localStorage.setItem("color", inputColor);
+				document.body.setAttribute("style", "background-color:"+localStorage.getItem("color"));
+			}
+			
+			//Executes when the 'Change Greeting' button is clicked
+			function changeGreeting(){
+				//Checks if the counter value is equal to the max length of the greetings array, and sets the greeting item accordingly to display the proper greeting
+				if(i == greetings.length){
+					//Resets the counter 
+					i = 0;
+					localStorage.setItem("greeting", greetings[i]);
+					i++;
+					var greeting = localStorage.getItem("greeting") + localStorage.getItem("name");
+					document.getElementById("greet").innerHTML = greeting;
+				}
+				else{
+					localStorage.setItem("greeting", greetings[i]);
+					i++;
+					var greeting = localStorage.getItem("greeting") + localStorage.getItem("name");
+					document.getElementById("greet").innerHTML = greeting;
+				}
+			}
+			
+			//Executes when the 'Logout' button is clicked
+			function logout(){
+				//Clears localStorage name and declares that the user has logged out.
+				localStorage.clear();
+				document.getElementById("greet").innerHTML = "You have logged out<br>Please 'refresh' the page to login again.";
+				
+				//All buttons become hidden
+				var btnLogout = document.getElementById("btnLogout").setAttribute("type", "hidden");
+				var btnColor = document.getElementById("btnColor").setAttribute("type", "hidden");
+				var btnGreeting = document.getElementById("btnGreeting").setAttribute("type", "hidden");
+			}
+			
+			//Executes when the 'Visit Source' button in the footer is clicked
+			function visit(){
+				//Opens a window to a similar website
+				var browser = window.open("https://www.zeldadungeon.net/twilight-princess-walkthrough/", "_blank", "titlebar, menubar, toolbar, width=400, height=200");
+			}
+			window.addEventListener("load", start, false);
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="col-md-12 offset-0">
+				<nav class="navbar navbar-expand-lg navbar-light bg-light">
+					<div class="navbar-header">
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-expanded="false">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+					</div> 
+					<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+						<div class="navbar-nav">
+							<a  href="../index.html">Home</a>
+							<a  href="../Characters/index.html">Characters</a>
+							<a  href="../Side_Quests/index.html">Side Quests</a>
+							<a  href="../Twilight_Trivia/index.html">Twilight Trivia</a>	
+							<a  href="../Armor/index.html">Random Armor</a>
+							<a  href="./index.html">Login</a>
+						</div>	
+					</div>
+				</nav>
+			</div>
+			<div class="col-md-12 offset-0">
+				<div class="banner">
+					<h1>LoZ Twilight Princess</h1>
+				</div>
+			</div>
+			<div class="col-md-12 offset-0">
+				<div class="body">
+					<p id="greet"></p>
+					<form action="#">
+						<input type="button" id="btnColor" value="Change Background Color"/>
+						<input type="button" id="btnGreeting" value="Change Greeting"/>
+						<input type="button" id="btnLogout" value="Logout"/>
+					</form><br>
+					<div class="picture">
+						<img id="portal" alt="Twilight Portal" src="../images/twilight_portal.png">
+					</div>
+				</div>
+			</div>
+			<div class="col-md-12 offset-0">
+				<div class="footer">
+					<p>This website is developed as an educational project. Certain materials are included under the fair 
+					use exemption of the U.S. Copyright Law and have been prepared according to the multimedia fair use 
+					guidelines and are restricted from further use.</p>
+					<p>All images were taken by Ashwin Paskar through the use of an iPhone</p>
+					<p>The image displayed on this webpage is from GunyenTony from 
+					<a href="https://www.teepublic.com/tote/582200-twilight-princess-green-portal">TeePublic</a></p>
+					<p>Here is a link to the style sheet: <a href="./zelda.css">zelda.css</a></p>
+					<form action="#">
+						<input type="button" id="btnOpen" value="Visit Source">
+					</form>
+					<script type="text/javascript">
+						//Displays the date the web page was last modified
+						var modified = new Date(document.lastModified);
+						var string = modified.toLocaleString();
+						document.writeln(string);
+					</script>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
