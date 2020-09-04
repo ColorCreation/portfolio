@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Backup Mail Server Service - Alpha1TecLabs</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" href="../images/Logo-01.svg" sizes="16x16">
+		
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+		<link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+		<link rel="stylesheet" href="../styles/styles.css" type="text/css">
+		
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
+		<script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<header>
+			<nav>
+				<a href="../index.html"><img id="logo" src="../images/Logo-01.svg" alt="Alpha1TecLabs Logo"></a>
+				<ul class="nav nav-tabs">
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Services</a>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" href="web_hosting.html">Web Hosting</a>
+							<a class="dropdown-item" href="domain_names.html">Domain Names</a>
+							<a class="dropdown-item" href="backup_dns_server.html#">Backup DNS Server</a>
+							<a class="dropdown-item" href="backup_mail_server.html">Backup Mail Server</a>
+							<a class="dropdown-item" href="automatic_dr_failover.html">Automatic DR Failover</a>
+						</div>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Info</a>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" href="../info/enum_tel.html">ENUM + .tel</a>
+							<a class="dropdown-item" href="../info/website_security.html">Website Security</a>
+							<a class="dropdown-item" href="../info/system_hardware.html">System Hardware</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="../info/portfolio.html">Sample Sites</a>
+							<a class="dropdown-item" href="../info/contact_us.html">Contact Us</a>
+						</div>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Help</a>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" href="../help/pc_remote_support.html">PC Remote Support</a>
+							<a class="dropdown-item" href="../help/server_remote_support.html">Server Remote Support</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="../help/domain_name_faq.html">Domain Name FAQ</a>
+							<a class="dropdown-item" href="../help/anti_spam_faq.html">Anti-Spam FAQ</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="../help/mail_faq_1.html">Mail FAQ 1</a>
+							<a class="dropdown-item" href="../help/mail_faq_2.html">Mail FAQ 2</a>
+							<a class="dropdown-item" href="../help/mail_faq_3.html">Mail FAQ 3</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="../help/website_faq_1.html">Website FAQ 1</a>
+							<a class="dropdown-item" href="../help/website_faq_2.html">Website FAQ 2</a>
+						</div>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<div class="clear"></div>
+		<article>
+			<section id="content">
+				<h1>Backup Mail Server</h1>
+				
+				<div class="flt_left">
+					<p>This service costs only <strong>£59.95</strong> per backup mail server per year.</p>
+				</div>
+				<div class="card-title flt_right">
+					<a class="btn btn-primary" href="#">Buy Now</a>
+				</div>
+				<div class="clear"></div>
+				
+				<div class="card border-primary mb-3 individual">
+					<div class="card-header">Performance Boost And Redundancy Failure Protection</div>
+					<div class="card-body">
+						<p class="card-text">24/7 continuous email operation is critical when doing business on the Internet. In the event of failure of your primary mail server your email will be automatically redirected to our backup mail secondary server and held in a queue until your server comes back online. Our backup secondary mail servers will also scan and clean your email of viruses and spam.</p>
+						<p class="card-text">Our backup MX server mail service is ideal for when you are running your own mail server and you want to ensure you do not lose any mail during unexpected downtime or when your primary mail server is too busy!</p>
+					</div>
+				</div>
+				<div class="card border-primary mb-3 individual">
+					<div class="card-header">What This Service Does</div>
+					<div class="card-body">
+						<p class="card-text">A backup email server service, is a group of servers on the Internet that temporarily queues your incoming email should your primary mail server be unavailable for any reason.</p>
+						<p class="card-text">When an email client tries to send emails, it lookups the domain's DNS to find out what the mail exchangers (MX) are for the domain. Each MX record is given a preference number and the lowest becomes the primary mail server. Mail delivery is first attempted on the lowest preference number MX. If the delivery fails, it tries the second lowest preference MX and so on. If no mail servers can be reached then the mail will be bounced back to the sender.</p>
+						<p class="card-text">Our mail backup service can act as your second or third priority mail server. If your mail server cannot be reached, then your email will be routed to our mail backup server and wait in queues. Our server will keep checking your mail server every 15 minutes. Once your mail server is detected available, our backup mail server will then forward the emails to your mail server. Our mail server will keep attempting to deliver your mail to your server for 6 days or longer if you require. Mails queued in our mail server exceeding this time will be returned to the sender.</p>
+					</div>
+				</div>
+				<div class="card border-primary mb-3 individual">
+					<div class="card-header">Why You Should Purchase This Service</div>
+					<div class="card-body">
+						<div class="card-text features">
+							<ul>Reasons why your primary email system may become unavailable:
+								<li>Mail Server Failure</li>
+								<li>Local Network Failure or Internet Connectivity is down or saturated</li>
+								<li>Overloaded or Unable to deal with new connections</li>
+								<li>It is down while being rebooted after a security patch</li>
+								<li>Offline due to an extended maintenance upgrade</li>
+								<li>Being Hacked/Targeted by DOS Attacks or Spammers</li>
+							</ul>
+						</div>
+						<div class="card-text features">
+							<ul>What could happen to your email without a backup service
+								<li>Email will be bounced back to the sender</li>
+								<li>Email could be lost</li>
+							</ul>
+						</div>
+						<div class="clear"></div>
+						<p class="card-text">A correctly configured backup MX service will ensure that you never lose an important email. In the event of failure of your primary mail server your email will be automatically redirected to our backup mail server and held in a queue until your server comes back online. Our backup mail servers will also scan and clean your email of viruses and spam.</p>
+					</div>
+				</div>
+				<div class="flt_left">
+					<p>This service costs only <strong>£59.95</strong> per backup mail server per year.</p>
+				</div>
+				<div class="card-title flt_right">
+					<a class="btn btn-primary" href="#">Buy Now</a>
+				</div>
+				<div class="clear"></div>
+			</section>
+			
+			<section id="links">
+				<div class="card card-link">
+					<div class="card-title">
+						<a class="btn btn-primary" href="web_hosting.html">Web Hosting</a>
+					</div>
+				</div>
+				<div class="card card-link">
+					<div class="card-title">
+						<a class="btn btn-primary" href="domain_names.html">Domain Names</a>
+					</div>
+				</div>
+				<div class="card card-link">
+					<div class="card-title">
+						<a class="btn btn-primary" href="backup_dns_server.html">Backup DNS Server</a>
+					</div>
+				</div>
+				<div class="card card-link">
+					<div class="card-title">
+						<a class="btn btn-primary" href="automatic_dr_failover.html">Automatic DR Failover</a>
+					</div>
+				</div>
+			</section>
+		</article>
+		<footer class="container-fluid">
+			<nav class="container">
+				<ul>Services
+					<li><a href="services/web_hosting.html">Web Hosting</a></li>
+					<li><a href="services/domain_names.html">Domain Names</a></li>
+					<li><a href="services/backup_dns_server.html">Backup DNS Server</a></li>
+					<li><a href="services/backup_mail_server.html">Backup Email Server</a></li>
+					<li><a href="services/automatic_dr_failover.html">Automatic DR Failover</a></li>
+				</ul>
+				<ul>Info
+					<li><a href="info/enum_tel.html">ENUM +.tel</a></li>
+					<li><a href="info/website_security.html">Website Security</a></li>
+					<li><a href="info/system_hardware.html">System Hardware</a></li>
+					<li><a href="info/portfolio.html">Sample Sites</a></li>
+				</ul>
+				<ul>Help
+					<li><a href="help/pc_remote_support.html">PC Remote Support</a></li>
+					<li><a href="help/server_remote_support.html">Server Remote Support</a></li>
+				</ul>
+				<ul>FAQ
+					<li><a href="help/domain_name_faq.html">Domain Name FAQ</a></li>
+					<li><a href="help/anti_spam_faq.html">Anti-Spam FAQ</a></li>
+					<li><a href="help/mail_faq_1.html">Mail FAQ 1</a></li>
+					<li><a href="help/mail_faq_2.html">Mail FAQ 2</a></li>
+					<li><a href="help/mail_faq_3.html">Mail FAQ 3</a></li>
+					<li><a href="help/website_faq_1.html">Website FAQ 1</a></li>
+					<li><a href="help/website_faq_2.html">Website FAQ 2</a></li>
+				</ul>
+				<ul>Contact Us
+					<li>Telephone: +44 (0)117 9712 641</li>
+					<li>Fax: +44 (0)117 9712 641</li>
+					<li>Email: support@alpha1teclabs.com</li>
+				</ul>
+			</nav>
+			<div class="clear"></div>
+			<p>Legal Statement - Privacy Notice - Policy Statement</p>
+			<p>Established 2001 Copyright <span>&copy;</span> Alpha1TecLabs Bristol UK ISP. All Rights Reserved.</p>
+			<p>This website is developed as an education project. Certain materials are included under the fair use exemption of the U.S. Copyright Law and have been prepared according to the multimedia fair use guidelines and are restricted from further use.</p>
+			<p>Content for this website comes from <a href="https://www.alpha1teclabs.com/">alpha1teclabs.com</a></p>
+			</div>
+		</footer>
+	</body>
+</html>

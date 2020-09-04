@@ -1,0 +1,220 @@
+body{
+	margin: 0;
+	padding: 0;
+}
+.clear{
+	clear: both;
+}
+.flt_right, .flt_left{
+	margin-top: 20px;
+}
+.flt_right{
+	float: right;
+	margin-right: 130px;
+}
+.flt_left{
+	float: left;
+	margin-left: 130px;
+}
+article .card-header, #accordion .card .card-header h5 button, #accordion2 .card .card-header h5 button, #accordion3 .card .card-header h5 button{
+	font-weight: bold;
+}
+header nav{
+	background-color: lightgreen;
+}
+header nav a #logo{
+	width: 63px;
+	margin-left: 10px;
+}
+header nav .nav-tabs{
+	float: right;
+}
+header nav .nav-tabs .nav-item .nav-link{
+	color: #004d00;
+}
+header nav .nav-tabs .nav-item .nav-link:hover{
+	background-color: limegreen;
+	color: white;
+}
+article #content{
+	background-color: ghostwhite;
+	padding: 30px;
+}
+article #content p, article #content h1, article #content h2{
+	text-align: center;
+}
+article #content #accordion, article #content #accordion2, article #content #accordion3{
+	width: 80%;
+	margin: 0 auto;
+	margin-bottom: 40px;
+}
+article #content #accordion .card .card-header, article #content #accordion2 .card .card-header, article #content #accordion3 .card .card-header{
+	text-align: center;
+}
+article #content .features{
+	width: 50%;
+	float: left;
+}
+article #content .card_sample{
+	width: 17rem;
+	margin: 20px;
+	display: inline-block;
+}
+article #content #accordion .card .collapse .card-body .left_align, article #content #accordion2 .card .collapse .card-body .left_align, article #content .card .card-body p{
+	text-align: left;
+}
+article #content #accordion .card .collapse .card-body .features ul, article #content #accordion2 .card .collapse .card-body .features ul, article #content #accordion3 .card .collapse .card-body .features ul{
+	font-weight: bold;
+}
+article #content #accordion .card .collapse .card-body .features ul li, article #content #accordion2 .card .collapse .card-body .features ul li, article #content #accordion3 .card .collapse .card-body .features ul li{
+	font-weight: normal;
+}
+article #content #accordion .card .collapse .card-body .features2 ul, article #content #accordion2 .card .collapse .card-body .features2 ul, article #content #accordion3 .card .collapse .card-body .features2 ul{
+	font-weight: bold;
+}
+article #content #accordion .card .collapse .card-body .features2 ul li, article #content #accordion2 .card .collapse .card-body .features2 ul li, article #content #accordion3 .card .collapse .card-body .features2 ul li{
+	font-weight: normal;
+}
+article #content #accordion .card .collapse .card-body .card-title, article #content #accordion2 .card .collapse .card-body .card-title, article #content #accordion3 .card .collapse .card-body .card-title{
+	float: right;
+	margin-right: 30px;
+}
+article #content .table-bordered{
+	margin: 0 auto;
+	text-align: center;
+	margin-bottom: 30px;
+}
+article #content .table-bordered tr th, article #content .table-bordered tr td{
+	padding: 20px;
+	background-color: white;
+}
+article #content .table-bordered tr th{
+	background-color: dodgerblue;
+	color: white;
+}
+article #content .individual{
+	margin: 30px auto;
+	width: 80%;
+}
+article #content .card .card-body .card-text{
+	text-align: left;
+}
+article #links{
+	background-color: powderblue;
+	padding: 10px;
+}
+article #links .container{
+	margin: 0 auto;
+}
+article #links .container .card{
+	display: inline-block;
+	margin: 20px;
+}
+article #links .container .card .card-body .card-title{
+	font-weight: bold;
+}
+article #links .container .card-home{
+	width: 16%;
+	vertical-align: top;
+}
+article #links .card-link{
+	width: 18rem;
+	text-align: center;
+	padding-top: 20px;
+}
+footer{
+	background-color: black;
+	color: white;
+	padding: 30px;
+}
+footer nav{
+	margin: 0 auto;
+}
+footer .container ul{
+	list-style: none;
+	display: inline-block;
+	vertical-align: top;
+	margin: 0 20px;
+	margin-bottom: 20px;
+	font-weight: bold;
+}
+footer .container ul li a, footer .container ul li{
+	font-weight: normal;
+}
+footer .container ul li a:hover{
+	color: white;
+}
+footer p:first-child{
+	
+}
+footer p{
+	text-align: center;
+}
+
+@media only screen and (min-width: 1441px){
+	article #links .container{
+		max-width: 80%;
+	}
+	article #links .container .card-home{
+		width: 17.8%;
+	}
+	article #links .card-link{
+		width: 18rem;
+	}
+	footer .container{
+		max-width: 50.7%;
+	}
+}
+@media only screen and (max-width: 1440px) and (min-width: 1201px){
+	article #links .container{
+		width: 80%;
+	}
+	article #links .container .card-home{
+		width: 28.3%;
+	}
+	article #links .card-link{
+		width: 18rem;
+	}
+	footer .container{
+		max-width: 98%;
+	}
+}
+@media only screen and (max-width: 1200px) and (min-width: 769px){
+	article #links .container{
+		width: 80%;
+	}
+	article #links .container .card-home{
+		width: 42%;
+	}
+	article #links .card-link{
+		width: 18rem;
+	}
+	footer .container{
+		max-width: 73.1%;
+	}
+}
+@media only screen and (max-width: 768px) and (min-width: 576px){
+	article #links .container{
+		width: 80%;
+	}
+	article #links .container .card-home{
+		width: 90%;
+	}
+	article #links .card-link{
+		width: 90%;
+	}
+	footer .container{
+		max-width: 73.1%;
+	}
+}
+@media only screen and (max-width: 575px){
+	article #links .container .card-home{
+		width: 90%;
+	}
+	article #links .card-link{
+		width: 90%;
+	}
+	footer .container{
+		max-width: 100%;
+	}
+}

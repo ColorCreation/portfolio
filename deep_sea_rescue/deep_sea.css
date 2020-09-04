@@ -1,0 +1,80 @@
+@charset "UTF-8";
+.row .navbar-default {
+	background-color: #3333FF;
+	background-image: -webkit-linear-gradient(270deg,rgba(102,153,204,1.00) 0%,rgba(51,51,255,1.00) 100%);
+	background-image: -moz-linear-gradient(270deg,rgba(102,153,204,1.00) 0%,rgba(51,51,255,1.00) 100%);
+	background-image: -o-linear-gradient(270deg,rgba(102,153,204,1.00) 0%,rgba(51,51,255,1.00) 100%);
+	background-image: linear-gradient(180deg,rgba(102,153,204,1.00) 0%,rgba(51,51,255,1.00) 100%);
+}
+.row .nav.navbar-nav>li>a {
+	border-top: solid 1px #33F;
+	border-left: solid 1px #33F;
+	border-bottom: solid 1px #069;
+	border-right: solid 1px #069;
+}
+.row .nav.navbar-nav>li>a:link, .row .nav.navbar-nav>li>a:visited {
+	color: #00CCCC;
+}
+.row .nav.navbar-nav>li>a:hover {
+	background-color: #6699CC;
+	background-image: -webkit-linear-gradient(270deg,rgba(51,51,255,1.00) 0%,rgba(102,153,204,1.00) 100%);
+	background-image: -moz-linear-gradient(270deg,rgba(51,51,255,1.00) 0%,rgba(102,153,204,1.00) 100%);
+	background-image: -o-linear-gradient(270deg,rgba(51,51,255,1.00) 0%,rgba(102,153,204,1.00) 100%);
+	background-image: linear-gradient(180deg,rgba(51,51,255,1.00) 0%,rgba(102,153,204,1.00) 100%);
+	color: #FFFFFF;
+}
+.row .nav.navbar-nav {
+	margin: 0px auto;
+	width: 715px;
+	float: none;
+}
+.row .navbar {
+	margin-bottom: 0px;
+}
+header.row h2 {
+	color: #FF33AA;
+	font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", sans-serif;
+	text-align: center;
+	font-size: 350%;
+}
+header.row p {
+	color: #0033FF;
+	font-weight: bold;
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+	text-align: center;
+	font-size: 110%;
+}
+header.row {
+	background-color: #66CCFF;
+}
+footer.row {
+	background-color: #66CCFF;
+}
+footer {
+	background-color: #66CCFF;
+	padding: 1em 0px;
+	color: #0033FF;
+}
+article.row {
+	background-color: #00CCCC;
+}
+.flt_rgt {
+	float: right;
+	margin-left: 10px;
+}
+.flt_lft {
+	float: left;
+	margin-right: 10px;
+}
+article.row h2 {
+	color: #FF33AA;
+}
+.profile {
+	margin: 0px 25px 15px 25px;
+	border-left-width: 2px;
+	border-bottom-width: 10px;
+	border-bottom: solid 10px #00FFFF;
+	border-left: solid 2px #00FFFF;
+	border-top: solid 5px #00FFFF;
+	padding-left: 10px;
+}
