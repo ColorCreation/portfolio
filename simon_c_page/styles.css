@@ -1,0 +1,251 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+h1{
+  font-family: 'Audiowide', cursive;
+  font-size: 50pt;
+  color: lightcyan;
+  text-align: center;
+}
+h2{
+  font-family: 'Roboto Slab', serif;
+  font-weight: 700;
+  font-size: 22pt;
+  color: cyan;
+  text-align: center;
+}
+h3{
+  font-family: 'Roboto Slab', serif;
+  font-weight: 400;
+  font-size: 16pt;
+  color: white;
+  margin-bottom: 0;
+}
+p{
+  font-family: 'Roboto', sans-serif;
+  line-height: 18pt;
+  font-size: 12pt;
+}
+
+a:link, a:visited{
+  text-decoration: none;
+  color: cyan;
+}
+a:hover{
+  color: white;
+}
+.links{
+  list-style: none;
+}
+.links li{
+  display: inline;
+}
+.center{
+  width: 1900px;
+  margin: 10px auto;
+}
+.center2{
+  width: 1200px;
+  margin: 10px auto;
+  margin-bottom: 60px;
+}
+#title{
+  background-image: url("images/header_background.jpg");
+}
+.artist{
+  float: left;
+  margin-right: 40px;
+}
+#summary{
+  width: 1150px;
+}
+#interview{
+  height: 950px;
+  padding-top: 20px;
+  background-image: url("images/interview_background.jpg");
+  background-repeat: repeat;
+}
+.column1, .column2, .column3{
+  width: 610px;
+  margin: 0 10px;
+  float: left;
+}
+.segment, .segment1, .segment2{
+  width: 600px;
+}
+.segment1{
+  margin-top: 105px;
+}
+.segment2{
+  margin-top: 50px;
+}
+.info{
+  border: 3px solid black;
+  padding: 20px;
+  background-color: white;
+}
+#box1, #box2{
+  float: left;
+  width: 900px;
+}
+#box2_1{
+  width: 300px;
+  float: left;
+}
+#box2_2{
+  float: left;
+  width: 200px;
+}
+#box1 img, #box2 img, #box2_1 img, #box2_2 img{
+  float: left;
+}
+.img1{
+  width: 600px;
+}
+.img2{
+  width: 260px;
+}
+.img3{
+  width: 215px;
+}
+.img4{
+  width: 280px;
+}
+.img5{
+  width: 170px;
+}
+.img6{
+  width: 360px;
+}
+.img7{
+  width: 300px;
+}
+.thin{
+  margin:10px;
+}
+.thick{
+  margin:20px;
+}
+.wide{
+  margin: 10px 40px;
+}
+.logo{
+  width: 50px;
+}
+footer{
+  background-color: teal;
+  color: white;
+  clear: left;
+  padding: 10px 30px;
+}
+@media only screen and (max-width: 2000px){
+  .center{
+    width: 1000px;
+    margin: 10px auto;
+  }
+  #interview{
+    height: 1450px;
+    padding-top: 20px;
+    background-image: url("images/interview_background.jpg");
+    background-repeat: repeat;
+  }
+  .column1, .column2, .column3{
+    width: 310px;
+    margin: 0 10px;
+    float: left;
+  }
+  .segment, .segment1, .segment2{
+    width: 300px;
+  }
+  .segment1{
+    margin-top: 15px;
+  }
+  .segment2{
+    margin-top: 75px;
+  }
+}
+@media only screen and (max-width: 1024px){
+  .center{
+    width: 600px;
+    margin: 10px auto;
+  }
+  .center2{
+    width: 700px;
+    margin: 10px auto;
+    margin-bottom: 60px;
+  }
+  .artist{
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 10px;
+  }
+  #summary{
+    width: 650px;
+  }
+  #interview{
+    height: 2550px;
+    padding-top: 20px;
+    background-image: url("images/interview_background.jpg");
+    background-repeat: repeat;
+  }
+  .column1, .column2, .column3{
+    width: 600px;
+    margin: 0 10px;
+    float: left;
+  }
+  .segment, .segment1, .segment2{
+    width: 600px;
+    margin-top: 10px;
+  }
+  #box1, #box2, #box2_1, #box2_2{
+    float: left;
+    width: 600px;
+  }
+  .img1, .img2, .img3, .img4, .img5, .img6, .img7{
+    width: 600px;
+  }
+}
+@media only screen and (max-width: 768px){
+  .center{
+    width: 400px;
+    margin: 10px auto;
+  }
+  .center2{
+    width: 400px;
+    margin: 10px auto;
+    margin-bottom: 60px;
+  }
+  .artist{
+    float: left;
+    width: 400px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+  }
+  #summary{
+    width: 400px;
+    clear: left;
+  }
+  #interview{
+    height: 3150px;
+    padding-top: 20px;
+    background-image: url("images/interview_background.jpg");
+    background-repeat: repeat;
+  }
+  .column1, .column2, .column3{
+    width: 400px;
+    margin: 0 10px;
+    float: left;
+  }
+  .segment, .segment1, .segment2{
+    width: 400px;
+    margin-top: 10px;
+  }
+  #box1, #box2, #box2_1, #box2_2{
+    float: left;
+    width: 400px;
+  }
+  .img1, .img2, .img3, .img4, .img5, .img6, .img7{
+    width: 400px;
+  }
+}

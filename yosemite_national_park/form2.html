@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Yosemite National Park - Volunteer Application</title>
+    <link type="text/css" rel="stylesheet" href="styles.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <div id="header">
+        <a href="index.html"><img src="images/yosemite_logo.png">
+        <h1>Yosemite National Park</h1></a>
+      </div>
+      <div id="navbar">
+        <ul>
+          <li>Discover</li>
+          <li>Lodging</li>
+          <li>Dining</li>
+          <li>Thing To Do</li>
+          <li>Winter</li>
+          <li>Group Travel</li>
+          <li>Special Offers</li>
+          <li><a href="form1.html">Volunteer</a></li>
+          <li>Blog</li>
+        </ul>
+      </div>
+    </header>
+    <article id="form">
+      <h2>Volunteer Application</h2>
+      <div id="status">
+        <div class="sq darkgreen">1</div>
+        <hr style="border-color: darkgreen;">
+        <div class="sq">2</div>
+        <hr>
+        <div class="sq">3</div>
+      </div>
+      <form method="GET" action="form3.html">
+        <div class="segment">
+          <p>Do you require housing?</p>
+          <div class="radio" >
+            <input type="radio" name="housing" id="housing1" value="yes"/>
+            <label for="housing1">Yes</label>
+          </div>
+          <div class="radio">
+            <input type="radio" name="housing" id="housing2" value="no"/>
+            <label for="housing2">No</label>
+          </div>
+        </div>
+        <div class="segment">
+          <label for="housing_req">If yes, please describe what type of housing you require</label><br>
+          <textarea name="housing_req" id="housing_req"></textarea>
+        </div>
+        <div class="segment">
+          <p>Specify what time span you will be available</p>
+          <label for="start_date">Start Date</label><br>
+          <input type="date" name="start_date" id="start_date"/><br>
+          <label for="end_date">End Date</label><br>
+          <input type="date" name="end_date" id="end_date"/>
+        </div>
+        <div class="segment">
+          <p>Specify which days of the week you will be available</p>
+          <div class="checkbox">
+            <input type="checkbox" name="day" id="mon"/>
+            <label for="mon">Monday</label>
+          </div>
+          <div class="checkbox">
+            <input type="checkbox" name="day" id="tue"/>
+            <label for="tue">Tuesday</label>
+          </div>
+          <div class="checkbox">
+            <input type="checkbox" name="day" id="wed"/>
+            <label for="wed">Wednesday</label>
+          </div>
+          <div class="checkbox">
+            <input type="checkbox" name="day" id="thu"/>
+            <label for="thu">Thursday</label>
+          </div>
+          <div class="checkbox">
+            <input type="checkbox" name="day" id="fri"/>
+            <label for="fri">Friday</label>
+          </div>
+          <div class="checkbox">
+            <input type="checkbox" name="day" id="sat"/>
+            <label for="sat">Saturday</label>
+          </div>
+          <div class="checkbox">
+            <input type="checkbox" name="day" id="sun"/>
+            <label for="sun">Sunday</label>
+          </div>
+        </div>
+        <div id="submit">
+          <input type="submit" value="Next"/>
+        </div>
+      </form>
+    </article>
+    <footer>
+		<p>This website is developed as an education project. Certain materials are included under the fair use exemption of the U.S. Copyright Law and have been prepared according to the multimedia fair use guidelines and are restricted from further use.</p>
+		<p>Content for this website comes from <a href="https://www.travelyosemite.com/">travelyosemite.com</a></p>
+    </footer>
+  </body>
+</html>
