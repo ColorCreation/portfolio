@@ -1,0 +1,177 @@
+header, article, footer{
+	clear: both;
+}
+header{
+	background-color: #400B80;
+	padding-left: 10px;
+}
+article #works h1, article #works .default, article #links h1, article #links p, article #process h1{
+	text-align: center;
+}
+article h1{
+	font-size: 25pt;
+}
+article #works .default, article #links p{
+	font-size: 16pt;
+	width: 60%;
+	margin: 0 auto;
+}
+article #works, article .link, article #process{
+	padding: 20px;
+}
+article #works, #accordion .card .collapse .card-body{
+	background-color: #AAF7F0;
+}
+article #links .link a .btn{
+	background-color: #400B80;
+	color: white;
+	margin: 30px 41%;
+	margin-bottom: 0px;
+}
+article #process h2, article #process p, article #process .process-image{
+	width: 50%;
+	margin: 0 auto;
+}
+article #process h1{
+	margin-bottom: 25px;
+}
+article #process h2{
+	margin-bottom: 10px;
+}
+article #process p{
+	margin-bottom: 20px;
+}
+article #process .process-image{
+	margin-bottom: 30px;
+}
+article #process .process-image .diagram{
+	width: 32%;
+}
+article #process .process-image .default-image{
+	width: 100%;
+}
+article #process .process-image .sketch{
+	width: 22%;
+	margin: 5px;
+}
+article #process .process-image .wireframe, article #process .process-image .prototype{
+	width: 18%;
+	margin: 5px;
+}
+footer{
+	background-color: #400B80;
+	color: white;
+	text-align: center;
+	padding: 15px;
+}
+.btn-group, .btn-group .dropdown-menu, .btn-group .dropdown-menu .dropdown-item{
+	background-color: #400B80;
+	color: white;
+}
+.btn-group .dropdown-menu .dropdown-item:hover{
+	background-color: #5110A1;
+	color: white;
+}
+#accordion .card .collapse .card-body .card, #works .card{
+	margin: 2%;
+	display: inline-block;
+	vertical-align: top;
+}
+#accordion .card .collapse .card-body .card .card-body{
+	background-color: white;
+}
+.card .card-body .btn{
+	background-color: #400B80;
+	color: white;
+	
+}
+
+/*MOBILE VERSION*/
+@media only screen and (max-width: 575px){
+	footer{
+		font-size: 12px;
+	}
+	#accordion .card .collapse .card-body .card, #works .card{
+		width: 95%;
+		margin: 2%;
+	}
+	article #links .link a .btn{
+		margin: 30px 28%;
+		margin-bottom: 0px;
+	}
+	article #process h2, article #process p, article #process .process-image{
+		width: 90%;
+	}
+	article #process .process-image .sketch{
+		width: 19%;
+	}
+	article #process .process-image .wireframe, article #process .process-image .prototype{
+		width: 14%;
+	}
+}
+
+/*TABLET VERSION*/
+@media only screen and (max-width: 768px) and (min-width: 576px){
+	footer{
+		font-size: 15px;
+	}
+	article #process h2, article #process p, article #process .process-image{
+		width: 90%;
+	}
+	article #process .process-image .wireframe, article #process .process-image .prototype{
+		width: 17%;
+	}
+	#accordion .card .collapse .card-body .card, #works .card{
+		width: 45%;
+	}
+}
+
+/*LAPTOP VERSION*/
+@media only screen and (max-width: 1440px) and (min-width: 769px){
+	footer{
+		font-size: 18px;
+	}
+	article #works .default, article #links p{
+		width: 65%;
+	}
+	article #links .link{
+		width: 50%;
+		float: left;
+	}
+	article #process h2, article #process p, article #process .process-image{
+		width: 70%;
+	}
+	article #process .process-image .sketch{
+		width: 23%;
+	}
+	article #process .process-image .wireframe, article #process .process-image .prototype{
+		width: 18%;
+	}
+	#accordion .card .collapse .card-body .card, #works .card{
+		width: 28%;
+	}
+}
+
+/*DESKTOP VERSION*/
+@media only screen and (min-width: 1441px){
+	footer{
+		font-size: 18px;
+	}
+	article #works .default, article #links p{
+		width: 40%;
+	}
+	article #links .link{
+		width: 50%;
+		float: left;
+	}
+	#accordion .card .collapse .card-body .card, #works .card{
+		width: 20%;
+	}
+	article #links .link a .btn{
+		margin: 30px 44%;
+		margin-bottom: 0px;
+	}
+	article #process h2, article #process p, article #process .process-image{
+		width: 50%;
+	}
+}
